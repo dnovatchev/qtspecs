@@ -4373,6 +4373,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="cos"/>
+      <fos:see-also prefix="math" name="tan"/>
    </fos:function>
    <fos:function name="cos" prefix="math">
       <fos:signatures>
@@ -4448,6 +4450,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="sin"/>
+      <fos:see-also prefix="math" name="tan"/>
    </fos:function>
    <fos:function name="tan" prefix="math">
       <fos:signatures>
@@ -4534,6 +4538,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="cos"/>
+      <fos:see-also prefix="math" name="sin"/>
    </fos:function>
    <fos:function name="asin" prefix="math">
       <fos:signatures>
@@ -4608,6 +4614,9 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="acos"/>
+      <fos:see-also prefix="math" name="atan"/>
+      <fos:see-also prefix="math" name="atan2"/>
    </fos:function>
    <fos:function name="acos" prefix="math">
       <fos:signatures>
@@ -4680,6 +4689,9 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="asin"/>
+      <fos:see-also prefix="math" name="atan"/>
+      <fos:see-also prefix="math" name="atan2"/>
    </fos:function>
    <fos:function name="atan" prefix="math">
       <fos:signatures>
@@ -4750,6 +4762,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="acos"/>
+      <fos:see-also prefix="math" name="asin"/>
       <fos:see-also prefix="math" name="atan2"/>
    </fos:function>
    <fos:function name="atan2" prefix="math">
@@ -4836,6 +4850,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="acos"/>
+      <fos:see-also prefix="math" name="asin"/>
       <fos:see-also prefix="math" name="atan"/>
    </fos:function>
    <fos:function name="sinh" prefix="math">
@@ -4879,6 +4895,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="cosh"/>
+      <fos:see-also prefix="math" name="tanh"/>
       <fos:changes>
          <fos:change issue="1196 1216" PR="1205 1230" date="2024-05-14"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -4928,6 +4946,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="sinh"/>
+      <fos:see-also prefix="math" name="tanh"/>
       <fos:changes>
          <fos:change issue="1196 1216" PR="1205 1230" date="2024-05-14"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -4975,6 +4995,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="math" name="cosh"/>
+      <fos:see-also prefix="math" name="sinh"/>
       <fos:changes>
          <fos:change issue="1196 1216" PR="1205 1230" date="2024-05-14"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -5030,6 +5052,7 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
          </fos:example>
       </fos:examples>
       <fos:see-also prefix="fn" name="string-to-codepoints"/>
+      <fos:see-also prefix="fn" name="characters"/>
       <fos:changes>
          <fos:change issue="414" PR="546" date="2023-07-25">
             <p>It is no longer automatically an error if the input
@@ -5073,6 +5096,8 @@ translate(value := '٢٠٢٣', replace := '٠١٢٣٤٥٦٧٨٩', with := '01234
          </fos:example>
       </fos:examples>
       <fos:see-also prefix="fn" name="codepoints-to-string"/>
+      <fos:see-also prefix="fn" name="characters"/>
+      <fos:see-also prefix="fn" name="tokenize"/>
    </fos:function>
 
    <fos:function name="compare" prefix="fn">
@@ -7126,7 +7151,7 @@ return normalize-unicode(concat($v1, $v2))</eg>
       </fos:examples>
       <fos:see-also prefix="fn" name="contains"/>
       <fos:see-also prefix="fn" name="ends-with"/>
-      <fos:see-also prefix="fn" name="matches"/
+      <fos:see-also prefix="fn" name="matches"/>
    </fos:function>
    <fos:function name="ends-with" prefix="fn">
       <fos:signatures>
@@ -7253,7 +7278,7 @@ return normalize-unicode(concat($v1, $v2))</eg>
       </fos:examples>
       <fos:see-also prefix="fn" name="starts-with"/>
       <fos:see-also prefix="fn" name="contains"/>
-      <fos:see-also prefix="fn" name="matches"/
+      <fos:see-also prefix="fn" name="matches"/>
    </fos:function>
    <fos:function name="substring-before" prefix="fn">
       <fos:signatures>
@@ -11197,6 +11222,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
       <fos:changes>
          <fos:change>
             <p>New in 4.0</p>
@@ -11256,6 +11282,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="month-from-date" prefix="fn">
       <fos:signatures>
@@ -11296,6 +11323,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="day-from-date" prefix="fn">
       <fos:signatures>
@@ -11336,6 +11364,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="timezone-from-date" prefix="fn">
       <fos:signatures>
@@ -11377,6 +11406,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="hours-from-time" prefix="fn">
       <fos:signatures>
@@ -11440,6 +11470,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="minutes-from-time" prefix="fn">
       <fos:signatures>
@@ -11469,6 +11500,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="seconds-from-time" prefix="fn">
       <fos:signatures>
@@ -11498,6 +11530,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="timezone-from-time" prefix="fn">
       <fos:signatures>
@@ -11535,6 +11568,7 @@ build-dateTime({ "year": 2007, "month": 5, "timezone": xs:dayTimeDuration("PT0S"
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="parts-of-dateTime"/>
    </fos:function>
    <fos:function name="adjust-dateTime-to-timezone" prefix="fn">
       <fos:signatures>
@@ -12674,6 +12708,8 @@ represented by the <code>$value</code> argument took place or will take place.
       <fos:rules>
          <p>See <specref ref="rules-for-datetime-formatting"/>.</p>
       </fos:rules>
+      <fos:see-also prefix="fn" name="format-dateTime"/>
+      <fos:see-also prefix="fn" name="format-time"/>
       <fos:changes>
          <fos:change issue="895" PR="901" date="2023-12-16">
             <p>The 3rd, 4th, and 5th arguments are now optional; previously the function required either 2 or 5 arguments.</p>
@@ -12701,6 +12737,8 @@ represented by the <code>$value</code> argument took place or will take place.
       <fos:rules>
          <p>See <specref ref="rules-for-datetime-formatting"/>.</p>
       </fos:rules>
+      <fos:see-also prefix="fn" name="format-dateTime"/>
+      <fos:see-also prefix="fn" name="format-date"/>
       <fos:changes>
          <fos:change issue="895" PR="901" date="2023-12-16">
             <p>The 3rd, 4th, and 5th arguments are now optional; previously the function required either 2 or 5 arguments.</p>
@@ -16070,6 +16108,11 @@ filter(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="subsequence-where"/>
+      <fos:see-also prefix="fn" name="slice"/>
+      <fos:see-also prefix="fn" name="starts-with-subsequence"/>
+      <fos:see-also prefix="fn" name="contains-subsequence"/>
+      <fos:see-also prefix="fn" name="ends-with-subsequence"/>
       <fos:changes>
          <fos:change issue="895" PR="901" date="2023-12-16">
             <p>The optional third argument can now be supplied as the empty sequence.</p>
@@ -16458,6 +16501,11 @@ for-each($at, fn($index) { subsequence($input, $index, 1) })
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="subsequence-where"/>
+      <fos:see-also prefix="fn" name="subsequence"/>
+      <fos:see-also prefix="fn" name="starts-with-subsequence"/>
+      <fos:see-also prefix="fn" name="contains-subsequence"/>
+      <fos:see-also prefix="fn" name="ends-with-subsequence"/>
       <fos:changes>
          <fos:change><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -16817,6 +16865,11 @@ return contains-subsequence(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="subsequence-where"/>
+      <fos:see-also prefix="fn" name="subsequence"/>
+      <fos:see-also prefix="fn" name="slice"/>
+      <fos:see-also prefix="fn" name="starts-with-subsequence"/>
+      <fos:see-also prefix="fn" name="ends-with-subsequence"/>
       <fos:changes>
          <fos:change issue="92" PR="222" date="2022-11-01"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -17869,6 +17922,12 @@ declare function equal-strings(
          </fos:example>
          
       </fos:examples>
+      <fos:see-also prefix="fn" name="codepoint-equal"/>
+      <fos:see-also prefix="fn" name="compare"/>
+      <fos:see-also prefix="fn" name="atomic-equal"/>
+      <fos:see-also prefix="fn" name="distinct-values"/>
+      <fos:see-also prefix="fn" name="index-of"/>
+      <fos:see-also prefix="fn" name="index-where"/>
       <fos:changes>
          <fos:change issue="930" PR="933" date="2024-01-16">
             <p>When comments and processing instructions are ignored, any text nodes either side of the
@@ -17955,6 +18014,8 @@ declare function equal-strings(
             </fos:test>
          </fos:example>        
       </fos:examples>
+      <fos:see-also prefix="fn" name="empty"/>
+      <fos:see-also prefix="fn" name="exists"/>
    </fos:function>
    <fos:function name="avg" prefix="fn">
       <fos:signatures>
@@ -18037,6 +18098,9 @@ declare function equal-strings(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="sum"/>
+      <fos:see-also prefix="fn" name="min"/>
+      <fos:see-also prefix="fn" name="max"/>
       <fos:changes>
          <fos:change issue="1682" PR="1734" date="2025-01-27">
             <p>In 3.1, given a mixed input sequence such as (1, 3, 4.2e0), the specification 
@@ -18329,6 +18393,9 @@ declare function equal-strings(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="max"/>
+      <fos:see-also prefix="fn" name="lowest"/>
+      <fos:see-also prefix="fn" name="highest"/>
       <fos:changes>
          <fos:change issue="866" PR="881" date="2023-12-06">
             <p>The way that <function>fn:min</function> and <function>fn:max</function> compare numeric values of different types
@@ -18489,6 +18556,9 @@ else head($c) + sum(tail($c))</eg>
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="avg"/>
+      <fos:see-also prefix="fn" name="min"/>
+      <fos:see-also prefix="fn" name="max"/>
       <fos:changes>
          <fos:change issue="1682" PR="1734" date="2025-01-27">
             <p>In 3.1, given a mixed input sequence such as (1, 3, 4.2e0), the specification 
@@ -22087,6 +22157,7 @@ serialize(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="civil-timezone"/>
    </fos:function>
    <fos:function name="current-date" prefix="fn">
       <fos:signatures>
@@ -22123,6 +22194,7 @@ serialize(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="civil-timezone"/>
    </fos:function>
    <fos:function name="current-time" prefix="fn">
       <fos:signatures>
@@ -22159,6 +22231,7 @@ serialize(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="civil-timezone"/>
    </fos:function>
    <fos:function name="implicit-timezone" prefix="fn">
       <fos:signatures>
@@ -22177,6 +22250,7 @@ serialize(
             of the dynamic context are described in <xspecref
                spec="XP40" ref="id-xp-evaluation-context-components"/>.</p>
       </fos:rules>
+      <fos:see-also prefix="fn" name="civil-timezone"/>
    </fos:function>
    <fos:function name="default-collation" prefix="fn">
       <fos:signatures>
@@ -34214,6 +34288,9 @@ return every($dl/*, fn($elem, $pos) {
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="min"/>
+      <fos:see-also prefix="fn" name="max"/>
+      <fos:see-also prefix="fn" name="lowest"/>
       <fos:changes>
          <fos:change date="2022-09-20"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -34280,6 +34357,7 @@ for-each(
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="index-of"/>
       <fos:changes>
          <fos:change date="2022-09-20"><p>New in 4.0</p></fos:change>
          <fos:change issue="1171" PR="1182" date="2024-05-07">
@@ -34571,6 +34649,9 @@ return $item
             </fos:test>
          </fos:example>
       </fos:examples>
+      <fos:see-also prefix="fn" name="min"/>
+      <fos:see-also prefix="fn" name="max"/>
+      <fos:see-also prefix="fn" name="highest"/>
       <fos:changes>
          <fos:change date="2022-09-20"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -35672,16 +35753,7 @@ path with an explicit <code>file:</code> scheme.</p>
 </fos:example>
 </fos:examples>
 
-<!--< fos:history>
-         <fos:version version="4.0">Proposed on 17 Oct 2022 to resolve
-         <loc href="https://github.com/qt4cg/qtspecs/issues/72">issue #72</loc>.
-         Accepted in principle on 15 Nov 2022, with some details still
-         to be resolved. Updated in response to 
-         <loc href="https://github.com/qt4cg/qtspecs/issues/389">issue #389</loc> and
-         <loc href="https://github.com/qt4cg/qtspecs/issues/390">issue #390</loc>.
-         Further updated on 13 September 2023 in response to comments from review
-         in meeting 042.</fos:version>
-      </fos:history>-->
+      <fos:see-also prefix="fn" name="build-uri"/>
       <fos:changes>
          <fos:change date="2022-10-17" PR="215 415 " issue="72 389 390"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -35920,16 +35992,7 @@ path with an explicit <code>file:</code> scheme.</p>
             </fos:test>
          </fos:example>
       </fos:examples>
-      <!--< fos:history>
-         <fos:version version="4.0">Proposed on 17 Oct 2022 to resolve
-         <loc href="https://github.com/qt4cg/qtspecs/issues/72">issue #72</loc>.
-         Accepted in principle on 15 Nov 2022, with some details still
-         to be resolved. Updated in response to 
-         <loc href="https://github.com/qt4cg/qtspecs/issues/389">issue #389</loc> and
-         <loc href="https://github.com/qt4cg/qtspecs/issues/390">issue #390</loc>.
-         Further updated on 13 September 2023 in response to comments from review
-         in meeting 042.</fos:version>
-      </fos:history>-->
+      <fos:see-also prefix="fn" name="parse-uri"/>
       <fos:changes>
          <fos:change date="2022-10-17" issue="72 389 390" PR="1423 1413"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -36103,7 +36166,10 @@ for-each(
                <fos:result><eg>[ () ], [ 1 ], [ (2, 1) ], [ (3, 2, 1) ]</eg></fos:result>
             </fos:test>
          </fos:example>           
-      </fos:examples>          
+      </fos:examples>
+      <fos:see-also prefix="fn" name="fold-left"/>
+      <fos:see-also prefix="fn" name="fold-right"/>
+      <fos:see-also prefix="fn" name="scan-right"/>
       <fos:changes>
          <fos:change issue="982" PR="1296" date="2024-06-23"><p>New in 4.0</p></fos:change>
       </fos:changes>
@@ -36162,7 +36228,10 @@ for-each(
 [ (5, 4) ], [ 5 ], [ () ]</eg></fos:result>
             </fos:test>
          </fos:example>
-      </fos:examples>      
+      </fos:examples>  
+      <fos:see-also prefix="fn" name="fold-left"/>
+      <fos:see-also prefix="fn" name="fold-right"/>
+      <fos:see-also prefix="fn" name="scan-left"/>
       <fos:changes>
          <fos:change><p>New in 4.0</p></fos:change>
       </fos:changes>
