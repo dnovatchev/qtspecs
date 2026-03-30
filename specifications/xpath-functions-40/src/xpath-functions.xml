@@ -1838,6 +1838,7 @@ This differs from <bibref ref="xmlschema-2"/>, which defines
                     <code>fenceHeight</code> can be substituted for its base type
                     <code>height</code> and <code>height</code> can be substituted for its base type
                     <code>xs:integer</code>. </p>
+-->
             <p>The basic rules for addition, subtraction, and multiplication
 			of ordinary numbers are not set out in this specification; they are taken as given. In the case of <code>xs:double</code>
 			and <code>xs:float</code> the rules are as defined in <bibref ref="ieee754-2019"/>. The rules for handling
