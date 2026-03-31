@@ -2207,22 +2207,31 @@ serialize($input, {
       </fos:errors>
       <fos:notes>
          <p>An implementation must not return the value <code>
-               3.0
+               4.0
             </code> as the value of the <code>xsl:version</code> system property unless it is
-            conformant to XSLT 3.0.</p>
-         <p>It is recognized that vendors who are enhancing XSLT 1.0 or
-               2.0 processors may wish to release interim implementations before all the
+            conformant to XSLT 4.0.</p>
+         <p>It is recognized that vendors who are developing XSLT 4.0 processors 
+            may wish to release interim implementations before all the
             mandatory features of this specification are implemented. Since such products are not
-            conformant to XSLT 3.0, this specification cannot define their behavior. However,
+            conformant to XSLT 4.0, this specification cannot define their behavior. However,
             implementers of such products are encouraged to return a value for the
-               <code>xsl:version</code> system property that is intermediate between 1.0 and 3.0,
+               <code>xsl:version</code> system property that is intermediate between 3.0 and 4.0,
             and to provide the <function>element-available</function> and
                <function>function-available</function> functions to allow users to test which
             features have been fully implemented.</p>
          <p>In XSLT 4.0, the argument can be supplied as a QName literal, for example
          <code>system-property( #xsl:version )</code>.</p>
-         <p>TODO: add change metadata (PR 1243)</p>
+         <p>XPath 4.0 introduces a similar function <function>fn:system-properties</function> with
+         the aim of delivering equivalent functionality across all XPath host languages (including XSLT). The new function
+         returns a map containing all available system properties. The property names listed here for the
+         <function>fn:system-property</function> function (with property names in the XSLT namespace)
+         are also available in the new <function>fn:system-properties</function> function when used in an
+         XSLT environment. In the case of properties defined here to return the string <code>"yes"</code>
+         or <code>"no"</code>, the new function returns an <code>xs:boolean</code>.</p>
       </fos:notes>
+      <fos:changes>
+         <fos:change issue="1242" PR="1243" date="2024-04-28"><p>Changed as necessary for version 4.0</p></fos:change>
+      </fos:changes>
    </fos:function>
    
    <fos:function name="available-system-properties">
