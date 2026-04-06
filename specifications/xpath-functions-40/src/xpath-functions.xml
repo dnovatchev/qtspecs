@@ -8622,6 +8622,9 @@ map( xs:string,
             <div3 id="func-unparsed-binary">
                <head><?function fn:unparsed-binary?></head>
             </div3>
+            <div3 id="func-system-properties">
+               <head><?function fn:system-properties?></head>
+            </div3>
             <div3 id="func-environment-variable">
                <head><?function fn:environment-variable?></head>
             </div3>
@@ -9858,7 +9861,7 @@ map( xs:string,
             <head>Functions on JSON Data</head>
             <p>The functions listed in this section parse or serialize JSON data.</p>
             
-            <p>JSON is a popular format for exchange of structured data on the web: it is specified in <bibref ref="rfc7159"/>.
+            <p>JSON is a popular format for exchange of structured data on the web: it is specified in <bibref ref="rfc8259"/>.
                This section describes facilities
                allowing JSON data to be converted to and from XDM values.</p>
             
@@ -14272,8 +14275,8 @@ Organization for Standardization, 2012. Available from: <loc href="http://www.is
                   the MD5 Message-Digest and the HMAC-MD5 Algorithms</emph> Available at:
                   <loc href="http://www.ietf.org/rfc/rfc6151.txt">http://www.ietf.org/rfc/rfc6151.txt</loc>.
                </bibl>
-               <bibl id="rfc7159" key="RFC 7159">IETF. <emph>RFC 7159: The Javascript Object Notation (JSON) Data Interchange Format</emph> Available at:
-                  <loc href="http://www.rfc-editor.org/rfc/rfc7159.txt">http://www.rfc-editor.org/rfc/rfc7159.txt</loc>.
+               <bibl id="rfc8259" key="RFC 8259">IETF. <emph>RFC 8259: The Javascript Object Notation (JSON) Data Interchange Format</emph> Available at:
+                  <loc href="http://www.rfc-editor.org/rfc/rfc8259.txt">http://www.rfc-editor.org/rfc/rfc8259.txt</loc>.
                </bibl>
                <bibl id="rfc7303" key="RFC 7303">H. Thompson and C. Lilley. <emph>XML Media Types</emph>.
                   IETF RFC 7303. See <loc href="http://www.ietf.org/rfc/rfc7303.txt">http://www.ietf.org/rfc/rfc7303.txt</loc>.</bibl>
@@ -14642,10 +14645,11 @@ ISBN 0 521 77752 6.</bibl>
                    type="dynamic">
                <p>Raised by <function>fn:parse-html</function> if the supplied string is not a well-formed HTML document.</p>
             </error>
-            <error class="DC" code="0013" label="No validating XML parser available."
+            <error class="DC" code="0013" label="No suitable XML parser available."
                type="dynamic">
-               <p>Raised when the <code>dtd-validation</code> option to <function>fn:parse-xml</function> is set,
-                  if no validating XML parser is available. Note: it is <rfc2119>recommended</rfc2119>
+               <p>Raised when the the options supplied to functions such as <function>fn:doc</function>
+                  or <function>fn:parse-xml</function> request features that are not available, for example
+                  DTD validation or XInclude processing. Note: it is <rfc2119>recommended</rfc2119>
                that all processors should support the <code>dtd-validation</code> option, but there
                may be environments (such as web browsers) where this is not practically feasible.</p>
             </error>
@@ -14658,6 +14662,12 @@ ISBN 0 521 77752 6.</bibl>
                type="dynamic">
                <p>Raised by <function>fn:xsd-validator</function> if it is not possible to assemble a valid and
                   consistent schema.</p>
+            </error>
+            <error class="DC" code="0016" label="External resources not available: call is untrusted."
+               type="dynamic">
+               <p>Raised by (for example) <function>fn:doc</function> and <function>fn:parse-xml</function>
+                  if external resources are required (such as external entities) and the <code>trusted</code>
+                  option is not set to <code>true</code>.</p>
             </error>
 			<error class="DF" code="1280" label="Invalid decimal format name."
                    type="dynamic">
@@ -14714,7 +14724,10 @@ ISBN 0 521 77752 6.</bibl>
 			   selects a component that is not present in a date, or if the picture string supplied to <function>fn:format-time</function> 
 			   selects a component that is not present in a time.</p>
             </error>
-			
+            <error class="HA" code="0001" label="Unknown hash algorithm." type="dynamic">
+               <p>Raised by <function>fn:hash</function> if the effective value of the supplied
+               algorithm is not one of the values supported by the implementation.</p>
+            </error>
             <error class="GR" code="0001" label="Attempt to access the value of a generator that is not initialized."
                type="dynamic">
                <p>A dynamic error is raised if the code attempts to access the current value 
@@ -14724,11 +14737,21 @@ ISBN 0 521 77752 6.</bibl>
                type="dynamic">
                <p>A dynamic error is raised if the code attempts to access the current value 
 			      or move to the next state of a generator whose <code>end-reached</code> field is <code>true()</code>.</p>
-			</error>
-			
-            <error class="HA" code="0001" label="Invalid algorithm." type="dynamic">
-               <p>Raised by <function>fn:hash</function> if the effective value of the supplied
-               algorithm is not one of the values supported by the implementation.</p>
+			</error>            
+            <error class="IX" code="0001" label="Invalid IXML grammar." type="dynamic">
+               <p>Raised by <function>fn:invisible-xml</function> if supplied grammar is incorrect
+                  according to the Invisible XML specification.</p>
+            </error>
+            
+            <error class="IX" code="0002" label="Input does not conform to IXML grammar" type="dynamic">
+               <p>Raised by the function item returned by <function>fn:invisible-xml</function> 
+                  if supplied input text does not conform to the supplied IXML grammar, if the
+                  <code>fail-on-error</code> option was set to <code>true</code>.</p>
+            </error>
+            
+            <error class="IX" code="0003" label="No IXML processor available." type="dynamic">
+               <p>Raised by <function>fn:invisible-xml</function> if no IXML processor
+               is available.</p>
             </error>
             
             <error class="JS" code="0001" label="JSON syntax error." type="dynamic">
