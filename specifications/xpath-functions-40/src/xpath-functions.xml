@@ -11279,6 +11279,13 @@ There is no constructor function for <code>xs:NOTATION</code>. Constructors are 
            <div2 id="constructor-functions-for-xsd-union-types">
               <head>Constructor functions for XML Schema built-in union types</head>
               
+              <changes>
+                 <change issue="2575">
+                    The <code>xs:error</code> function is now defined to be available whether or not
+                    XSD 1.1 is supported.
+                 </change>
+              </changes>
+              
               <p>There is a constructor function for the union type <code>xs:numeric</code>
                  defined in <bibref ref="xpath-datamodel-40"/>. The function signature is:</p>
               
@@ -11317,8 +11324,9 @@ There is no constructor function for <code>xs:NOTATION</code>. Constructors are 
                  <item><p>In all other cases, a dynamic error <errorref class="RG" code="0001"/> occurs.</p></item>
               </olist>
               
-              <p>In the case of an implementation that supports XSD 1.1, there is a constructor function
-              associated with the built-in union type <code>xs:error</code>.</p>
+              <p>There is a constructor function associated with the built-in union type <code>xs:error</code>.
+              The type <code>xs:error</code> is defined in XSD 1.1 as union type with no member types;
+              it is available whether or not the implementation supports XSD 1.1.</p>
               
               <p>The function signature is as follows:</p>
               
