@@ -11280,7 +11280,7 @@ There is no constructor function for <code>xs:NOTATION</code>. Constructors are 
               <head>Constructor functions for XML Schema built-in union types</head>
               
               <changes>
-                 <change issue="2575">
+                 <change issue="2575" PR="2577" date="2026-04-09">
                     The <code>xs:error</code> function is now defined to be available whether or not
                     XSD 1.1 is supported.
                  </change>
