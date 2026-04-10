@@ -108,6 +108,19 @@
           <xsl:when test="exists(fos:test-assertion)">
             <xsl:copy-of select="fos:test-assertion/*:result/*"/>           
           </xsl:when>
+          <xsl:when test="fos:result[@narrative and (errorref or xerrorref)]">
+            <!-- In this case the generated test must compile and execute, but the result is not tested -->
+            <!-- If the result indicates that an error may be raised, accept that error as a pass. -->
+            <any-of>
+              <assert>true()</assert>
+              <xsl:for-each select="fos:result/errorref">
+                <error code="FO{@class}{@code}"/>
+              </xsl:for-each>
+              <xsl:for-each select="fos:result/xerrorref">
+                <error code="{@spec}{@class}{@code}"/>
+              </xsl:for-each>
+            </any-of>
+          </xsl:when>
           <xsl:when test="fos:result[@narrative]">
             <!-- In this case the generated test must compile and execute, but the result is not tested -->
             <assert>true()</assert>
