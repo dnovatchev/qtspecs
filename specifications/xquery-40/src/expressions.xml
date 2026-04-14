@@ -22432,9 +22432,9 @@ return { $persons/*/* }
                      to take that map (or record) as its first argument is referred
                      to as a <term>method</term>.</termdef></p>
             
-               <p><termdef id="dt-method-call" term="method call"/> A <term>method call</term> is an expression
+               <p><termdef id="dt-method-call" term="method call">A <term>method call</term> is an expression
                that uses the operator <code>=?></code> to invoke a <termref def="dt-method"/>,
-               supplying the containing map (or record) implicitly as the first operand.</p>
+               supplying the containing map (or record) implicitly as the first operand.</termdef></p>
                
                
                <p>For example, consider the variable:</p>
@@ -22460,10 +22460,10 @@ let $rectangle := {
                <p>Here the entries with keys <code>"area"</code>, <code>"perimeter"</code>,
                   and <code>"resize"</code> are 
                   <termref def="dt-method">methods</termref>:
-                  they are functions that take a rectangle as its first
+                  they are functions that take a rectangle as their first
                argument, and return a result computed 
                by reference to the values of other entries (<code>"height"</code>
-               and <code>"width"</code> within the containing map.</p>
+               and <code>"width"</code>) within the containing map.</p>
                
                <p>The <termref def="dt-method-call"/> <code>$rectangle =?> area()</code> returns <code>12</code>, while
                the method call <code>$rectangle =?> perimeter()</code> returns <code>14</code>,
