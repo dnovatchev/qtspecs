@@ -10669,7 +10669,7 @@ and <code>version="1.0"</code> otherwise.</p>
                   <p>This example illustrates the definition of a recursive record type.
                   The record type represents a node of a binary tree containing a payload value
                   in each node, together with optional references to left and right subtrees.
-                  As well as the data fields, the record type defines a <code>depth</code> function 
+                  As well as the data fields, the record type defines a <code>depth</code> <xtermref spec="XP40" ref="dt-method"/> 
                   that returns the maximum depth of the tree, by making recursive calls on its
                   subtrees.</p>
                   
@@ -10681,7 +10681,7 @@ and <code>version="1.0"</code> otherwise.</p>
       default="fn {1 + max((?left =?> depth(), ?right =?> depth())) otherwise 0)}"/>
 </xsl:record-type>]]></eg>
                   
-                  <p>Method calls (using the operator <code>=?></code>) are described in
+                  <p>Methods and method calls (using the operator <code>=?></code>) are described in
                      <xspecref spec="XP40" ref="id-methods"/>. The effect is to
                      give a function item contained in a map access to the containing
                      map.
