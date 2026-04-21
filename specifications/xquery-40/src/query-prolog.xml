@@ -2062,7 +2062,7 @@ local:depth(doc("partlist.xml"))
     <example>
     <p>For example, given the declaration:</p>
     
-    <eg>declare type app:invoice as map("xs:string", element(inv:paid-invoice));</eg>
+    <eg>declare type app:invoice as map(xs:string, element(inv:paid-invoice));</eg>
     
     <p>It becomes possible to declare a variable containing a sequence of such items as:</p>
       
@@ -2070,7 +2070,7 @@ local:depth(doc("partlist.xml"))
       
     <p>The definition can also be used within another item type declaration:</p>
       
-    <eg>declare type app:overdue-invoices as map("xs:date", app:invoice*);</eg>  
+    <eg>declare type app:overdue-invoices as map(xs:date, app:invoice*);</eg>
       
     </example>
     
