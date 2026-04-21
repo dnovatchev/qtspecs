@@ -224,7 +224,7 @@
           <code>StringLiteral</code>, <code>NumericLiteral</code>, 
           <code>Wildcard</code>, and <code>StringTemplate</code>; 
         plus <code>@</code> <code>.</code> <code>..</code> <code>*</code>
-          <code>$</code> <code>?</code> <code>??</code> <code>%</code>
+          <code>$</code> <code>?</code> <code>%</code>
           <code>(</code> <code>[</code>; and in XQuery <code>StringConstructor</code> and <code>DirectConstructor</code>.
         </p>
         
@@ -945,7 +945,7 @@
     </note>
   </div2>
   <div2 id="id-precedence-order">
-    <head>Precedence Order (Non-Normative)</head>
+    <head>Operator Precedence (Non-Normative)</head>
     <p>The grammar in <specref ref="id-grammar"/> normatively defines built-in precedence among the
       operators of <phrase role="xquery">XQuery</phrase><phrase role="xpath">XPath</phrase>. These operators are summarized here to make clear the order of their
       precedence from lowest to highest. The associativity column indicates the order in which
@@ -1080,41 +1080,48 @@
         <tr>
           <td>17</td>
           <td>
-            <nt def="ArrowExpr">=>, =!></nt>
+            <nt def="PipelineExpr">-></nt>
           </td>
           <td>left-to-right</td>
         </tr>
         <tr>
           <td>18</td>
           <td>
+            <nt def="ArrowExpr">=>, =!></nt>
+          </td>
+          <td>left-to-right</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>
             <nt def="UnaryExpr">-, + (unary)</nt>
           </td>
           <td>right-to-left</td>
         </tr>
         <tr>
-          <td>19</td>
+          <td>20</td>
           <td>
             <nt def="SimpleMapExpr">!</nt>
           </td>
           <td>left-to-right</td>
         </tr>
         <tr>
-          <td>20</td>
+          <td>21</td>
           <td>
             <nt def="PathExpr">/, //</nt>
           </td>
           <td>left-to-right</td>
         </tr>
         <tr>
-          <td>21</td>
+          <td>22</td>
           <td>
-            <nt def="Predicate">a[b]</nt>, <nt def="FilterExprAM">a?[b]</nt>, <nt def="Lookup">a?b, a??b</nt>,
+            <nt def="Predicate">a[b]</nt>, <nt def="FilterExprAM">a?[b]</nt>, <nt def="Lookup">a?b</nt>,
             <nt def="DynamicFunctionCall">a(b)</nt>
           </td>
           <td>left-to-right</td>
         </tr>
         <tr>
-          <td>22</td>
+          <td>23</td>
           <td>
             <nt def="UnaryLookup">? (unary)</nt>
           </td>

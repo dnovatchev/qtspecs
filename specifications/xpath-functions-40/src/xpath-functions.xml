@@ -15078,6 +15078,13 @@ ISBN 0 521 77752 6.</bibl>
               it is no longer acceptable to supply a string or boolean. The 1.0 compatibility rules allow a string or boolean to be
               supplied where the required type is <code>xs:double</code>, but not where it is <code>xs:numeric</code>.</p>
            </item>
+           
+           <item>
+              <p>Functions with the ability to access external resources (for example <function>fn:doc</function>
+              and <function>fn:parse-xml</function>) are now designed to be secure by default. If they are to continue
+              operating as before, it may be necessary to set the option <code>{"trusted":true()}</code> or to
+              set some implementation-dependent configuration option that makes this the default.</p>
+           </item>
         </olist>
  
          <p>For compatibility issues regarding earlier versions, see the 3.1 version of this specification.</p>
