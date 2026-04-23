@@ -13145,9 +13145,10 @@ return $tree =?> depth()]]></eg>
                priority depends on the item type:</p>
                
                <ulist>
-                  <item><p>For a <xtermref spec="XP40" ref="dt-choice-item-type"/>, 
+                  <item><p>For a <xtermref spec="XP40" ref="dt-choice-item-type"/>,
+                        or for a <xtermref spec="XP40" ref="dt-pure-union-type"/>
                         the default priority is the maximum priority of the item types included
-                        in the choice, computed according to the rules below.</p></item>
+                        in the choice or union, computed according to the rules below.</p></item>
                   
                   <item><p>For the item type <code>item()</code>, the default priority is -1 (minus one).</p></item>
                                    
